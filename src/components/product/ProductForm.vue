@@ -103,14 +103,14 @@ function selectImage() {
 <style scoped>
 
 .add-form {
-  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
   min-width: 600px;
+  max-width: 1200px;
+  max-height: 90vh;
   text-align: center;
 }
 
-.add-form .inputs-container{
-
-}
 
 .add-form textarea {
   height: 8em;
@@ -120,6 +120,7 @@ function selectImage() {
   width: 100%;
   height: auto;
   max-height: 400px;
+  max-width: 400px;
   cursor: pointer;
   object-fit: contain;
   object-position: top;

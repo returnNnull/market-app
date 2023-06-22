@@ -6,6 +6,7 @@ export const loggedUser = defineStore('loggedUser', () => {
   const id = ref("")
   const displayName = ref("")
   const isLogged = ref(false)
+  const email = ref("")
 
 
   function clear(){
@@ -14,13 +15,18 @@ export const loggedUser = defineStore('loggedUser', () => {
     this.isLogged = false
   }
 
-  function set(id, name){
+  function set(id, name, email){
     this.id = id
     this.displayName = name
     this.isLogged = true
+    this.email = email
   }
 
-  return {id, displayName, isLogged , set, clear}
+  function isAdmin(){
+    return this.email === "dachniv.vol@gmail.com"
+  }
+
+  return {id, displayName, isLogged , set, clear, isAdmin}
 })
 
 
@@ -106,11 +112,5 @@ export const basket = defineStore('basket', () => {
   return {list, size, add, remote, saveLocal, sum, deleteFromBasket}
 })
 
-class BasketItem{
-  constructor(id, count) {
-    this.id = id;
-    this.count = count
-  }
-}
 
 

@@ -11,7 +11,7 @@ import AppFooter from '@/components/AppFooter.vue'
 const user = loggedUser()
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    loggedUser().set(user.uid, user.displayName)
+    loggedUser().set(user.uid, user.displayName, user.email)
   } else {
     loggedUser().clear()
   }

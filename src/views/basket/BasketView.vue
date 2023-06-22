@@ -37,7 +37,7 @@
 <script setup>
 
 import { basket } from '@/stores/local'
-import { onMounted, reactive, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { getProductById } from '@/stores/firebase-db'
 import ButtonPrimary from '@/components/inputs/ButtonPrimary.vue'
 

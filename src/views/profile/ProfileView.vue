@@ -7,9 +7,9 @@
           <li>
             <a @click = 'show(0)'>Профиль</a>
           </li>
-          <li>
+          <li v-if="user.isAdmin()">
             <a @click = 'show(1)'>Контент</a></li>
-          <li>
+          <li v-if="user.isAdmin()">
             <a @click = 'show(2)'>Информация</a></li>
           <li>
             <a @click = '_signOut'>Выйти</a></li>

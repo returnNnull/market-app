@@ -32,13 +32,11 @@ function closeModal() {
   right: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.9);
-  z-index: 1000;
+  z-index: 1001;
 }
 
 .modal-body{
-
-  width: 200px;
-  height: 200px;
+  width: 100%;
   background: white;
 }
 
